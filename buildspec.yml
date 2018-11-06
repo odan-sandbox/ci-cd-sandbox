@@ -1,10 +1,13 @@
 version: 0.2
 
 phases:
-  pre_build:
-    commands:
-      - echo Logging in to Amazon ECR...
-      - aws ecr get-login
   build:
     commands:
       - docker build -t nuxt .
+  post_build:
+    commands:
+      - docker save nuxt > app.tar
+
+artifacts:
+  files:
+    - app.tar
