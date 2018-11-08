@@ -10,6 +10,7 @@ jobs:
   build:
     executor: nuxt-app/default
     steps:
+      - checkout
       - nuxt-app/install
       - nuxt-app/lint
       - nuxt-app/build
