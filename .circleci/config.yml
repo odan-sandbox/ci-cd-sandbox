@@ -12,5 +12,4 @@ jobs:
     steps:
       - checkout
       - nuxt-app/install
-      - nuxt-app/lint
       - nuxt-app/build
