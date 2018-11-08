@@ -1,0 +1,16 @@
+version: 2.1
+
+description: build nuxt app
+
+orbs:
+    nuxt-app: odan/nuxt-app@dev:0.0.0
+
+
+jobs:
+  build:
+    executor: nuxt-app/default
+    steps:
+      - checkout
+      - nuxt-app/install
+      # - nuxt-app/lint
+      - nuxt-app/build
