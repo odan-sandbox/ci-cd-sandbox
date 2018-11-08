@@ -6,4 +6,6 @@ orbs:
 workflows:
     "Hello Workflow":
         jobs:
-          - hello/hello-build
+          build:
+            steps:
+              - hello/circleci-env-highlights
