@@ -6,6 +6,6 @@ orbs:
 
 jobs:
   build:
-    machine: true
+    executor: hello/default
     steps:
       - hello/circleci-env-highlights
