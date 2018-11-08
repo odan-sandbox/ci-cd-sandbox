@@ -1,11 +1,15 @@
 version: 2.1
 
+description: build nuxt app
+
 orbs:
-    hello: circleci/hello-build@0.0.5
+    nuxt-app: odan/nuxt-app@dev:0.0.0
 
 
 jobs:
   build:
-    executor: hello/default
+    executor: nuxt-app/default
     steps:
-      - hello/circleci-env-highlights
+      - nuxt-app/install
+      - nuxt-app/lint
+      - nuxt-app/build

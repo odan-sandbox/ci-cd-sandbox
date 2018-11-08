@@ -1,0 +1,37 @@
+version: 2.1
+
+description: build nuxt app
+
+executors:
+  default:
+    docker:
+    - image: circleci/node:<< parameters.tag >>
+    parameters:
+      tag:
+        default: latest
+        type: string
+
+commands:
+  install:
+    description: |
+      install dependency
+    steps:
+      - run:
+          name: run yarn command
+          command: yarn
+
+  lint:
+    description: |
+      run linter
+    steps:
+      - run:
+          name: run yarn lint
+          command: yarn lint
+
+  build:
+    description: |
+      build app
+    steps:
+      - run:
+          name: run yarn build
+          command: yarn build
