@@ -1,5 +1,11 @@
 version: 0.2
 
+# サンプルだしべた書き
+env:
+  variables:
+    IMAGE_REPO_NAME: "nuxt-app"
+    IMAGE_TAG: "v0"
+
 phases:
   pre_build:
     commands:
