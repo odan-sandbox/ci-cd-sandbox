@@ -1,0 +1,21 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "nuxt-app",
+      "image": "330815285612.dkr.ecr.ap-northeast-1.amazonaws.com/eb-docker-deploy:v0",
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 3000
+        }
+      ],
+      "memory": 256
+    }
+  ],
+  "authentication": {
+    "Bucket": "elasticbeanstalk-ap-northeast-1-330815285612",
+    "Key": "config.json"
+  }
+}
