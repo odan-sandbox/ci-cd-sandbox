@@ -1,7 +1,5 @@
 # ci-cd-sandbox
 
-> My solid Nuxt.js project
-
 ## Build Setup
 
 ``` bash
